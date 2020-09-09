@@ -1,0 +1,32 @@
+---
+galaxy_info:
+  author: 'stationgroup'
+  description: |
+    Ansible role for installings and configuring lograte on Linux, deploying a list of defaults only if the
+    logfiles are present on the system.
+  license: MIT
+  min_ansible_version: 2.8
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+    - name: Fedora
+      versions:
+        - 29
+    - name: Ubuntu
+      versions:
+        - bionic
+        - cosmic
+        - disco
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+        - buster
+
+  galaxy_tags:
+    - system
+    - logrotate
+    - log
+    - rotate
