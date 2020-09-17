@@ -36,14 +36,50 @@ logrotate_btmp:
 # An example of multiple log rotate applications with available settings:
 # logrotate_applications:
 #   - name: name-your-log-rotate-application
-#     definitions:
-#       - logs:
-#           - /var/log/apt/term.log
-#           - /var/log/apt/history.log
-#         options:
-#           - rotate 12
-#           - monthly
-#           - missingok
-#           - notifempty
-#           - compress
-logrotate_applications: []
+#     logs:
+#       - /var/log/apt/term.log
+#       - /var/log/apt/history.log
+#     options:
+#       - rotate 12
+#       - monthly
+#       - missingok
+#       - notifempty
+#       - compress
+logrotate_applications:
+  - name: nextcloud-snap-apache-php_errors
+    logs:
+      - /var/snap/nextcloud/current/apache/logs/*.log
+    options:
+      - daily
+      - compress
+      - rotate 6
+      - missingok
+      - copytruncate
+      - delaycompress
+
+  - name: nextcloud-snap-apache-error_log"
+    logs:
+      - /var/snap/nextcloud/current/apache/logs/error_log
+    options:
+      - daily
+      - compress
+      - rotate 6
+      - missingok
+      - copytruncate
+      - delaycompress
+
+  - name: custom
+    logs:
+      -  /var/log/custom/*_log
+    options:
+      - daily
+      - compress
+      - rotate 6
+
+  - name : dpkg
+    logs:
+      - /var/log/dpkg.log
+    options:
+      - daily
+      - compress
+      - rotate 6
