@@ -1,0 +1,22 @@
+---
+- name: 'check if there exist log files for {{ item.name }}'
+  shell:
+    cmd: "ls -l {{ item.logs|join(' ') }}"
+  changed_when: false
+  register: _available_logs
+  check_mode: false
+  failed_when: false
+  tags:
+    - configuration
+
+- name: 'create logrotate configuration file for {{ item.name }}'
+  become: true
+  template:
+    src: 'etc/logrotate.d/application.j2'
+    dest: '/etc/logrotate.d/{{ item.name }}'
+    owner: root
+    group: root
+    mode: 0644
+  when: _available_logs.stdout_lines|length() > 0
+  tags:
+    - configuration
