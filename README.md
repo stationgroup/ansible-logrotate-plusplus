@@ -13,7 +13,7 @@ infrastructure and only write logerotate rules to the appropriate system with th
 This project was based of https://github.com/arillso/ansible.logrotate 1.5.2
 (https://github.com/arillso/ansible.logrotate/commit/038649f7933c21ba9f1f2c8363bfb4d49aaf46f2)
 
-This Ansible role was made possible by Ansible consultant Serge van Ginderachter of _Ginsys_:
+**This Ansible role was made possible by: Ansible consultant _Serge van Ginderachter_ of _Ginsys_:**
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 | [<img src="https://avatars2.githubusercontent.com/u/382239" width="100px;"/><br /><sub>Serge van Ginderachter</sub>](https://github.com/srgvg)<br />[📖](https://github.com/stationgroup/ansible-experiments/commits?author=srgvg) | [<img src="https://avatars0.githubusercontent.com/u/4183827?s=original" width="100px;"/><br /><sub>Ginsys</sub>](https://ginsys.eu/)<br />[🌐](https://ginsys.eu/) |
