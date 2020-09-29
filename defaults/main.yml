@@ -70,13 +70,13 @@ logrotate_applications:
 
   - name: custom
     logs:
-      -  /var/log/custom/*_log
+      - /var/log/custom/*_log
     options:
       - daily
       - compress
       - rotate 6
 
-  - name : dpkg
+  - name: dpkg
     logs:
       - /var/log/dpkg.log
     options:
