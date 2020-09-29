@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: 'stationgroup.logrotate-plusplus'
+  role_name: 'logrotate_plusplus'
   author: 'stationgroup'
   description: |
     Ansible role for installings and configuring lograte on Linux, deploying a list of defaults only if the
