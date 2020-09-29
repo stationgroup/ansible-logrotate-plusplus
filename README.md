@@ -1,8 +1,6 @@
 # ansible-logrotate-plusplus
 
 
-# Ansible Role: logrotate-plusplus
-
 ## Description
 
 Ansible role which installs and configures logrotate
@@ -25,7 +23,7 @@ This project was based of https://github.com/arillso/ansible.logrotate 1.5.2
 ## Installation
 
 ```bash
-  ansible-galaxy install stationgroup.logrotate-plusplus
+  ansible-galaxy install stationgroup.ansible_logrotate_plusplus
 ```
 
 ## Requirements
@@ -134,7 +132,7 @@ None
 ```yml
 - hosts: all
   roles:
-    - stationgroup.logrotate-plusplus
+    - stationgroup.ansible_logrotate_plusplus
 ```
 
 ## License
